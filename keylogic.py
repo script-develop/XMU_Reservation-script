@@ -10,7 +10,7 @@ import time
 
 def make_reservation(driver,desired_time_slot,phonenumber):
     # 等待并点击游泳馆预约链接
-    gym_reservation_link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[@href="/room/1" and @title=""]')))
+    gym_reservation_link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[@href="/room/2" and @title=""]')))
     gym_reservation_link.click()
 
     # 等待页面加载完成
