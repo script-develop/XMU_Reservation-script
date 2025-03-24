@@ -1,46 +1,63 @@
-# XMU_Reservation-script
+# Gym Reservation Project
 
-这是一个基于selenium的预约脚本，用于快速预约体育馆的场馆
+This project automates the process of reserving a gym slot using a web interface. It utilizes Selenium for browser automation and requires a configuration file for user credentials and desired reservation details.
 
----
+## Project Structure
 
-## 功能
-- **预约时间段**: 自动查找并选择可用的健身房或游
-- **保存账号密码**: 首次运行时会提示输入账号和密码，并将其保存到 `config.json` 文件中，后续运行无需再次输入。
-
----
-
-## 环境配置
-
-### **克隆仓库**  
-首先，使用 `git` 克隆本仓库：  
-
-```bash
-git clone https://github.com/script-develop/XMU_Reservation-script.git
-cd XMU_Reservation-script
 ```
-### **安装依赖**  
-请确保您的环境已安装 Python，并使用以下命令安装所需依赖：  
-
-```bash
-pip install -r requirements.txt
+gym-reservation
+├── main.py               # Main entry point of the application
+├── make_reservation.py   # Contains the logic for making reservations
+└── README.md             # Documentation for the project
 ```
 
-`requirements.txt` 包含以下库：  
-- `selenium` —— 用于浏览器自动化  
-- `webdriver-manager` —— 自动管理浏览器驱动  
+## Requirements
 
----
+- Python 3.x
+- Selenium
+- A compatible web driver (e.g., ChromeDriver for Google Chrome)
 
-## 使用方法  
+## Setup Instructions
 
-### **运行脚本**
-在终端（命令行）中运行以下命令：  
+1. **Clone the repository**:
+   ```
+   git clone <repository-url>
+   cd gym-reservation
+   ```
 
-```bash
-python chromemain.py
-```
+2. **Install dependencies**:
+   Make sure you have the required packages installed. You can use pip to install Selenium:
+   ```
+   pip install selenium
+   ```
 
-### **账号配置**
-- **首次运行** 时，脚本会提示您输入账号和密码，并将其保存至 `config.json`，后续运行无需重复输入。  
-- **如果需要修改账号信息**，可直接手动编辑 `config.json` 文件。  
+3. **Configure the application**:
+   Create a `config.json` file in the project directory with the following structure:
+   ```json
+   {
+       "browser_path": "path/to/your/browser",
+       "webdriver_path": "path/to/your/webdriver",
+       "username": "your_username",
+       "password": "your_password",
+       "desired_time_slot": "desired_time_slot",
+       "phone_number": "your_phone_number"
+   }
+   ```
+
+4. **Run the application**:
+   Execute the `main.py` file to start the reservation process:
+   ```
+   python main.py
+   ```
+
+## Usage
+
+- The application will log in to the gym's reservation system using the credentials provided in the `config.json` file.
+- It will then attempt to make a reservation for the specified time slot.
+- If successful, a confirmation message will be displayed.
+
+## Notes
+
+- Ensure that the web driver is compatible with the version of the browser you are using.
+- Adjust the desired time slot in the `config.json` file as needed.
+- The application may require adjustments based on changes to the gym's reservation website.
