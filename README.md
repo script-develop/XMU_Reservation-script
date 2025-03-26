@@ -1,6 +1,6 @@
-### 需要将所提供的ddddocr.zip内的四个文件替换掉原本用pip安装的ddddocr文件
+## 需要将所提供的ddddocr.zip内的四个文件替换掉原本用pip安装的ddddocr文件
 
-# 替换路径为Python安装目录/Python/Python313/Lib/site-packages/ddddocr 
+### 替换路径为Python安装目录/Python/Python313/Lib/site-packages/ddddocr 
 
 ## 替换前
 ![image](https://github.com/user-attachments/assets/3f5d4b62-66f1-4bcc-994a-ed74d97bcfe1)
