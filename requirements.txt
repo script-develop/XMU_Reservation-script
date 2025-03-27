@@ -1,0 +1,6 @@
+PyQt5==5.15.6
+Selenium==4.1.0
+ddddocr==0.6.0
+webdriver-manager==3.5.2
+requests==2.26.0
+pystray
